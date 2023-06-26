@@ -8,11 +8,11 @@ function Contact() {
     >
       <p className='font-titleFont text-lg text-textGreen font-semibold flex
       items-center tracking-wide'>
-        04. What's Next?
+        04. What is Next?
       </p>
       <h2 className='font-titleFont text-5xl font-semibold'>Get In Touch</h2>
-      <p>Although I'm not currently looking for any new opportunities, my inbox is always open. 
-        Wheater you have a question or just want to say h1, I'll try my best to get back to you!
+      <p>Although I am not currently looking for any new opportunities, my inbox is always open. 
+        Wheater you have a question or just want to say h1, I will try my best to get back to you!
       </p>
       <a href="mailto:meeran78@gmail.com">
         <button className='w-40 h-14 border border-textGreen mt-6 font-titleFont text-sm
