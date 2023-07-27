@@ -1,20 +1,43 @@
 "use client";
 import React, { useState } from "react";
 import SectionTitle from "./SectionTitle";
-import NextAge from "./works/NextAge";
+import NextAge from "./works/NexAge";
 import Datumsoft from "./works/Datumsoft";
+import AHM from "./works/AHM";
+import ADM from "./works/ADM";
 
 export default function Experience() {
-  const [workNextage, setWorkNextage] = useState(true);
+  const [workNexage, setWorkNexage] = useState(false);
   const [workDatumsoft, setDatumsoft] = useState(false);
+  const [workAHM, setworkAHM] = useState(true);
+  const [workADM, setworkADM] = useState(false);
 
-  const handleNextage = () => {
-    setWorkNextage(true);
+  const handleNexage = () => {
+    setWorkNexage(true);
     setDatumsoft(false);
+    setworkAHM(false);
+    setworkADM(false)
   };
+
   const handleDatumsoft = () => {
-    setWorkNextage(false);
-    setDatumsoft(true);
+     setDatumsoft(true);
+     setWorkNexage(false);
+     setworkAHM(false);
+     setworkADM(false)
+  };
+
+  const handleAHM = () => {
+    setWorkNexage(false);
+    setDatumsoft(false);
+    setworkAHM(true);
+    setworkADM(false)
+  };
+
+  const handleADM = () => {
+    setWorkNexage(false);
+    setDatumsoft(false);
+    setworkAHM(false);
+    setworkADM(true)
   };
   return (
     <section
@@ -25,15 +48,15 @@ export default function Experience() {
       <div className="w-full mt-10 flex flex-col md:flex-row gap-16">
         <ul className="md:w-32 flex flex-col">
           <li
-            onClick={handleNextage}
+            onClick={handleAHM}
             className={`${
-              workNextage 
+              workAHM 
               ? " border-l-textGreen text-textGreen" 
               : "border-l-hoverColor text-textDark"}
             border-l-2 bg-transparent hover:bg-[#112240]
     py-3  text-sm cursor-pointer duration-300 px-8 font-medium`}
           >
-            ReactBD
+            AHM
           </li>
           <li
             onClick={handleDatumsoft}
@@ -44,34 +67,35 @@ export default function Experience() {
             border-l-2 bg-transparent hover:bg-[#112240]
     py-3  text-sm cursor-pointer duration-300 px-8 font-medium`}
           >
-            Google
+            Datumsoft
           </li>
           <li
-            className="border-l-2 border-l-hoverColor text-textDark bg-transparent hover:bg-[#112240]
-    py-3 text-sm cursor-pointer duration-300 px-8"
+            onClick={handleADM}
+            className={`${
+              workADM 
+              ? " border-l-textGreen text-textGreen" 
+              : "border-l-hoverColor text-textDark"}
+            border-l-2 bg-transparent hover:bg-[#112240]
+    py-3  text-sm cursor-pointer duration-300 px-8 font-medium`}
           >
-            Apple
+            ADM
           </li>
           <li
-            className="border-l-2 border-l-hoverColor text-textDark bg-transparent hover:bg-[#112240]
-    py-3 text-sm cursor-pointer duration-300 px-8"
-          >
-            Amazon
-          </li>
-          <li
-            className="border-l-2 border-l-hoverColor text-textDark bg-transparent hover:bg-[#112240]
-    py-3 text-sm cursor-pointer duration-300 px-8"
-          >
-            QSA
-          </li>
-          <li
-            className="border-l-2 border-l-hoverColor text-textDark bg-transparent hover:bg-[#112240]
-    py-3 text-sm cursor-pointer duration-300 px-8"
+           onClick={handleNexage}
+           className={`${
+             workNexage 
+             ? " border-l-textGreen text-textGreen" 
+             : "border-l-hoverColor text-textDark"}
+           border-l-2 bg-transparent hover:bg-[#112240]
+   py-3  text-sm cursor-pointer duration-300 px-8 font-medium`}
           >
             Nexage
           </li>
+          
         </ul>
-        {workNextage && <NextAge />}
+        {workADM && <ADM />}
+        {workAHM && <AHM />}
+        {workNexage && <NextAge />}
         {workDatumsoft && <Datumsoft />}
       </div>
     </section>

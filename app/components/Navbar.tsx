@@ -24,7 +24,7 @@ const Navbar = () => {
     elem?.scrollIntoView({
       behavior: "smooth",
     });
-    //update the class name of the clikced link
+    //update the class name of the clicked link
 
     const links = document.querySelectorAll(".nav-link");
     links.forEach((link) => {
@@ -180,9 +180,9 @@ const Navbar = () => {
             >
               <MdOutlineClose
                 onClick={() => setShowMenu(false)}
-                className="text-3xl text-textGreen cursor-poiter hover:text-red-500 absolute top-4 right-4"
+                className="text-3xl text-textGreen cursor-pointer hover:text-red-500 absolute top-4 right-4"
               />
-              <div className="flex flex-col text-base gap-7">
+              <div className="flex flex-col text-base gap-7 items-center">
                 <ul className="flex flex-col text-base gap-7">
                   <Link
                     href="#home"
@@ -266,7 +266,7 @@ const Navbar = () => {
                     Resume
                   </motion.button>
                 </a>
-                <div className="flex flex-row gap-4 text-textLight">
+                <div className="flex flex-row gap-4 text-textLight items-center">
                   <div className="flex flex-row gap-4">
                     <motion.a
                       initial={{ y: 20, opacity: 0 }}

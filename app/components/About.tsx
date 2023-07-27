@@ -12,10 +12,7 @@ const About = () => {
       <div className="flex flex-col lgl:flex-row gap-16">
         <div className="w-full lgl:w-2/3 text-base text-textDark font-medium flex flex-col gap-4">
           <p>
-            Hello, My name is Meeran... Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Autem officia dignissimos ipsam, rem iusto facilis
-            libero quos sapiente in cupiditate. Cumque, consequuntur. Fugit
-            dolores modi eius neque illo, est consequatur.
+            Hello, My name is Meeran. Throughly experienced technical solution provider in computer programming with 16+ years of experience in System engineering, Technical lead using different technologies. Currently working in Activehealth Management as Engineering Manager.
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
